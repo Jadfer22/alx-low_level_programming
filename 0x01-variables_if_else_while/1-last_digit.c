@@ -4,6 +4,7 @@
 /**
  * main - A program that prints the last digit of a random number and if it is greater than 5, leas than 6 or 0
  *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
