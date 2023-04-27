@@ -2,6 +2,7 @@
 /**
  * main - Causes an infinite loop
  */
+
 int main(void)
 {
 	int i;
