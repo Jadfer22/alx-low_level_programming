@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_remaining_days - take a date and print how many days are left in the year, taking leap years into account
+ * print_remaining_days - take a date and print
+ * how many days are left in the year, taking le
+ * ap years into account
  * @month: month in number format
  * @day: day of month
  * @year: year
