@@ -1,19 +1,26 @@
 #include "main.h"
 
 /**
- * set_bit - function that returns the value of a bit
+ * get_bit - function that returns the value of a bit
  * at a given index
+ * @n: unsigned long int input
  * @index: index of the bit
- * @n: number of the bit to be searched
- * Return: 1 on success or -1 if an error occurred
+ * Return: value of the bit at index or -1 if an error occurs
  */
-int set_bit(unsigned long int *n, unsigned int index)
+int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int set;
+	unsigned int i;
 
-	if (index > (sizeof(unsigned long int) * 8 - 1))
-		return (-1);
-	set = 1 << index;
-	*n = *n | set;
-	return (1);
+	if (n == 0 && index < 64)
+		return (0);
+
+	for (i = 0; i <= 63; n >>= 1, i++)
+	{
+		if (index == i)
+		{
+			return (n & 1);
+		}
+	}
+
+	return (-1);
 }
